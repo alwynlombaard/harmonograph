@@ -61,7 +61,12 @@
                 url: "https://api.justgiving.com/4066ece8/v1/account/alwyn@justgiving.com/pages",
                 method: "GET",
                 dataType: 'jsonp',
-                accepts: {jsonp: "application/json"}
+                accepts: {
+                    jsonp: "application/json",
+                    json: "application/json",
+                    text: "application/json",
+                    xml: "application/json"
+                }
             }).done(function (data) {
                 console.log(data);
             }).always(function () {
