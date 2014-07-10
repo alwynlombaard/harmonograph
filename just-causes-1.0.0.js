@@ -64,7 +64,7 @@
                     xhrObj.setRequestHeader("Accept","application/json");
                 },
                 method: "GET",
-                dataType: "jsonp",
+                dataType: "jsonp json",
                 contentType: "application/json"
             }).done(function (data) {
                 console.log(data);
