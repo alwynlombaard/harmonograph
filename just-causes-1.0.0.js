@@ -57,6 +57,11 @@
 
             div.innerHTML = 'hello from just causes';
 
+            jQuery.getJSON("https://api.justgiving.com/4066ece8/v1/account/alwyn@justgiving.com/pages?callback=?",  
+                function (data) {  
+                    console.log(data);  
+                });  
+
             $.ajax({
                 url: "https://api.justgiving.com/4066ece8/v1/account/alwyn@justgiving.com/pages?callback=?",
                 beforeSend: function(xhrObj){
