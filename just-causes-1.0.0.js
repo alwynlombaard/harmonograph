@@ -56,7 +56,17 @@
 		  scriptTag.parentNode.insertBefore(div, scriptTag);
 		  
 		  div.innerHTML = 'hello from just causes';
-
+		  
+		   $.ajax({
+                url: "https://api.justgiving.com/4066ece8/v1/account/alwyn@justgiving.com/pages",
+                method: "GET",
+				contentType: "application/json",
+				dataType: 'jsonp'
+            }).done(function(data) {
+				console.log(data);
+            }).always(function()
+				console.log("always");
+			});
 		}
 	}
 })(this);
