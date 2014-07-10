@@ -62,7 +62,7 @@
                 dataType: "jsonp",
                 contentType: "application/json"
             }).done(function (data) {
-                 div.innerHTML = <pre> + data + </pre>;
+                 div.innerHTML = "<pre>" + data + "</pre>";
             }).always(function () {
                 console.log("always");
             });
