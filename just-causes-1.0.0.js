@@ -64,7 +64,7 @@
 				dataType: 'jsonp'
             }).done(function(data) {
 				console.log(data);
-            }).always(function()
+            }).always(function(){
 				console.log("always");
 			});
 		}
