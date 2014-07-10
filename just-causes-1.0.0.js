@@ -58,13 +58,12 @@
             div.innerHTML = 'hello from just causes';
 
             $.ajax({
-                url: "https://api.justgiving.com/4066ece8/v1/account/alwyn@justgiving.com/pages",
+                url: "https://api.justgiving.com/4066ece8/v1/account/alwyn@justgiving.com/pages?callback=?",
                 beforeSend: function(xhrObj){
                     xhrObj.setRequestHeader("Content-Type","application/json");
                     xhrObj.setRequestHeader("Accept","application/json");
                 },
                 method: "GET",
-                dataType: "jsonp json",
                 contentType: "application/json"
             }).done(function (data) {
                 console.log(data);
