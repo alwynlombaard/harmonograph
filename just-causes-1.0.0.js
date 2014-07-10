@@ -59,8 +59,9 @@
 
             $.ajax({
                 url: "https://api.justgiving.com/4066ece8/v1/account/alwyn@justgiving.com/pages",
-                beforeSend: function(request) {
-                    request.setRequestHeader('Accept', 'application/json');
+                beforeSend: function(xhrObj){
+                    xhrObj.setRequestHeader("Content-Type","application/json");
+                    xhrObj.setRequestHeader("Accept","application/json");
                 },
                 method: "GET",
                 dataType: 'jsonp'
